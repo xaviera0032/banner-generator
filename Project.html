@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Project</title>
+  <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+  <script>
+    $(function() {
+      $("input").focus(function() {
+        $(this).css("background-color", "#e3e1df")
+      });
+      
+      $("input").blur(function() {
+        $(this).css("background-color", "#ffffff")
+      });
+    });
+  </script>
+</head>
+
+<body>
+  Day: <input type="text" name="Day" /> <br> Month: <input type="text" name="Month" /> <br> Name: <input type="text" name="Name" />
+</body>
+
+</html>
