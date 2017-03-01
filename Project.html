@@ -10,16 +10,28 @@
       $("input").focus(function() {
         $(this).css("background-color", "#e3e1df")
       });
-      
+
       $("input").blur(function() {
         $(this).css("background-color", "#ffffff")
       });
+
+      //$('button').click(function() {
+       // alert("It was the +"Day (First, Second, Etc.)"+ day of +"Month"+ where +"Your Name"+ looked at this spectacular website.");
+      });
+      
+      $('button').click(function() {
+        var userWord =
+      $('Day (First, Second, Etc.)').val(userWord);  
+      $('Month').val(userWord);
+      $('Your Name').val(userWord);
     });
   </script>
 </head>
 
 <body>
-  Day: <input type="text" name="Day" /> <br> Month: <input type="text" name="Month" /> <br> Name: <input type="text" name="Name" />
+  Day (First, Second, Etc.) <input type="text" name="Day" /> <br> Month <input type="text" name="Month" /> <br> Your Name <input type="text" name="Name" />
+
+<button>Submit Result</button>
 </body>
 
 </html>
