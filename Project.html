@@ -6,32 +6,45 @@
   <title>Project</title>
   <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
   <script>
+    function setup() {
+      createCanvas(500, 500);
+    }
+
     $(function() {
       $("input").focus(function() {
-        $(this).css("background-color", "#e3e1df")
+        $(this).css('background-color', '#e3e1df')
       });
 
-      $("input").blur(function() {
-        $(this).css("background-color", "#ffffff")
+      $('input').blur(function() {
+        $(this).css('background-color', '#ffffff')
       });
 
-      //$('button').click(function() {
-       // alert("It was the +"Day (First, Second, Etc.)"+ day of +"Month"+ where +"Your Name"+ looked at this spectacular website.");
-      });
-      
       $('button').click(function() {
-        var userWord =
-      $('Day (First, Second, Etc.)').val(userWord);  
-      $('Month').val(userWord);
-      $('Your Name').val(userWord);
+        var day = $('#day').val();
+        var month = $("#month").val();
+        var name = $("#name").val();
+
+        var story = "On the " + day + " day of " + month + ", " + name + " looked at this amazing website.";
+
+        console.log(story);
+        $("p").html(story);
+      });
+
+      $('button').click(function() {
+        $(this).css('background-color', '(random(255),random(255),random(255))');
+
+      });
+
     });
   </script>
 </head>
 
 <body>
-  Day (First, Second, Etc.) <input type="text" name="Day" /> <br> Month <input type="text" name="Month" /> <br> Your Name <input type="text" name="Name" />
+  Day(First, Second, Etc.):<br> <input type="text" id="day" /> <br> Month:<br> <input type="text" id="month" /> <br> Your Name:<br> <input type="text" id="name" /><br><br>
 
-<button>Submit Result</button>
+  <button>Submit Result</button>
+
+  <p></p>
 </body>
 
 </html>
