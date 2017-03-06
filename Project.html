@@ -6,13 +6,9 @@
   <title>Project</title>
   <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
   <script>
-    function setup() {
-      createCanvas(500, 500);
-    }
-
     $(function() {
       $("input").focus(function() {
-        $(this).css('background-color', '#e3e1df')
+        $(this).css('background-color', '#c4c4c4')
       });
 
       $('input').blur(function() {
@@ -24,16 +20,12 @@
         var month = $("#month").val();
         var name = $("#name").val();
 
-        var story = "On the " + day + " day of " + month + ", " + name + " looked at this amazing website.";
+        var story = "On the " + day + " day of " + month + ", " + name + " looked at this amazing website. " + name + " liked this website so much, he/she proudly named it the best of all time. Hands down, no discussion needed.";
 
         console.log(story);
         $("p").html(story);
       });
 
-      $('button').click(function() {
-        $(this).css('background-color', '(random(255),random(255),random(255))');
-
-      });
 
     });
   </script>
